@@ -1,0 +1,287 @@
+/* 
+CSS Reset 
+------------------------------------------------------------------------
+The idea is to reset the default styling set by individual browsers, 
+establishing a default display on all browsers and allowing us to work 
+from complete scratch rather than fighting with the defaults.
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    /*-webkit-transition-property: all; 
+    -webkit-transition-duration: 0.3s; 
+    -webkit-transition-timing-function: ease; */
+}
+
+/* Style sheet */
+
+.nav-bar {
+    background-color: rgb(37, 38, 51);
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    border-radius: 0px 0px 10px 10px;
+    position: fixed;
+    left: 60px;
+    right: 60px;
+    z-index: 10;
+}
+
+.splashscreen-img-parent {
+    display: grid;
+}
+
+.splash-screen-button {
+    background-color: rgba(255, 255, 255, 0);
+    max-height: 650px;
+    width: 100%;
+    grid-column: 1;
+    grid-row: 1;
+    z-index: 2;
+}
+
+.sc-link {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* Splash Screen */
+.splash-screen-img-properties {
+    object-fit: cover;
+    object-position: 50% 60%;
+    max-height: 650px;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    flex-grow: 3;
+    flex-shrink: .3;
+    min-width: 139px;
+    min-height: 78px;
+    grid-column: 1;
+    grid-row: 1;
+    z-index: 0;
+}
+
+.gradient-img {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(0, 0, 0, .95) 25%, rgba(255, 255, 255, .1) 80%);
+    max-height: 650px;
+    aspect-ratio: 16 / 10;
+    flex-grow: 3;
+    flex-shrink: .3;
+    min-width: 139px;
+    min-height: 78px;
+    grid-column: 1;
+    grid-row: 1;
+    z-index: 1;
+}
+
+.gradient-img-page {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, hsl(240, 20%, 5%) 5%, hsla(240, 20%, 5%, 0) 50%);
+    max-height: 650px;
+    aspect-ratio: 16 / 10;
+    flex-grow: 3;
+    flex-shrink: .3;
+    min-width: 139px;
+    min-height: 78px;
+    grid-column: 1;
+    grid-row: 1;
+    z-index: 1;
+}
+
+.splash-screen-container {
+    height: 0px;
+    width: 0px;
+    padding-bottom: 0px;
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+
+.sc-text-button{
+    z-index: 3;
+}
+
+.splash-screen-txt{
+    color: aliceblue;
+    text-align: left;
+    font-size: 25px;
+    width: 350px;
+    transform: translate(60px, -180px);
+    grid-area: 1 / 1;
+}
+
+.splash-PlayVideo {
+    transform: auto;
+    transform: translate(60px, -200px);
+    padding: 10px 0px 10px 0px;
+    background-color: rgb(124, 132, 150);
+    margin-top: 30px;
+    grid-area: 1 / 1;
+}
+
+.splash-PlayVideo:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.splash-button:hover {
+    color: black;
+    border: 1px solid white;
+}
+
+.splash-button {
+    color: rgb(255, 255, 255);
+    padding: 10px 50px 10px 50px;
+    font-size: 20px;
+}
+
+/* Body */
+#wrapper {
+    padding-left:60px;
+    padding-right: 60px;
+    margin: auto;
+    background-color: hsl(240, 20%, 5%);
+}
+
+.scroll-bar{
+    overflow-y: 400px;
+}
+
+.title {
+    color: rgba(232, 240, 240, 1);
+    padding: 20px;
+    font-size: 25px;
+}
+
+.service-request {
+    color: rgba(232, 240, 240, 1);
+    background-color: rgba(232, 240, 255, 0.3);
+    padding: 5px 10px 5px 10px;
+    margin: 15px 20px 15px 10px;
+    border-radius: 10px;
+}
+
+.service-request:hover {
+    background-color: rgba(232, 240, 240, 0.5);
+    color: black;
+    transform: scale(1.08);
+}
+
+.req-ser-link {
+    color: rgba(232, 240, 240, 1);
+}
+
+.req-ser-link:hover {
+    color: black;
+}
+
+.logo {
+    max-width: 95px;
+    max-height: 60px;
+    min-width: 95px;
+    min-height: 60px;
+}
+
+.spacer {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* Major Thumbnails */
+.thumbnailMajor {
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    width: auto;
+}
+
+.thumbnailMajor-box {
+    aspect-ratio: 16 / 9;
+    margin: 10px 0px 10px 0px;
+    border-radius: 10px;
+    flex-grow: 3;
+    flex-shrink: .3;
+    width: 100%;
+    min-width: 300px;
+    min-height: 169px;
+    cursor: pointer;
+    background-color: black;
+}
+
+.major-thumbnail {
+   min-width: 300px;
+   min-height: 169px;
+   aspect-ratio: 16 / 9;
+   width: 100%;
+   border-radius: 10px;
+   cursor: pointer; 
+}
+
+.major-thumbnail:hover {
+    transform: scale(1.02); 
+    border: 1px solid rgb(255, 255, 255);
+    background-color: black;
+}
+
+/* Minor Thumbnails */
+.thumbnailMinorRow {
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    width: auto;
+}
+
+.minor-thumbnail {
+    min-width: 139px;
+    min-height: 78px;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    width: 100%;
+    border-radius: 10px;
+ }
+
+ .thumbnailMinor-box {
+    aspect-ratio: 16 / 9;
+    margin: 0px 0px 10px 0px;
+    border-radius: 10px;
+    flex-grow: 3;
+    flex-shrink: .3;
+    min-width: 139px;
+    min-height: 78px; 
+    background-color: black;
+}
+
+.minor-thumbnail:hover {
+    transform: scale(1.1);
+    border: 1px solid rgb(255, 255, 255);
+    background-color: black;
+}
+
+ /* Categories */
+ .minor-category {
+    color: white;
+    font-size: 20px;
+ }
+
+ .major-category {
+    color: white;
+    font-size: 35px;
+    padding-top: 5px;
+ }
+
+ .footer {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    padding-top:20px;
+    padding-bottom: 30px;
+    background-color: black;
+ }
